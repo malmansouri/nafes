@@ -414,18 +414,20 @@ if pct_cols and len(pct_cols) == 4:
 
                 # ألوان ثابتة لمستويات الأداء
                 colors_map = {
-                    pct_very_low: "#1f77b4",  # أزرق
+                    
+                    pct_very_low: "#d62728",  # أحمر
                     pct_low:      "#ff7f0e",  # برتقالي
                     pct_mid:      "#2ca02c",  # أخضر
-                    pct_high:     "#d62728",  # أحمر
+                    pct_high:     "#1f77b4",  # أزرق
                 }
 
                 # أسماء الألوان بالعربي
                 colors_names = {
-                    pct_very_low: "أزرق",
+                    
+                    pct_very_low: "أحمر",
                     pct_low:      "برتقالي",
                     pct_mid:      "أخضر",
-                    pct_high:     "أحمر",
+                    pct_high:     "أزرق",
                 }
 
                 legend_rows = []
