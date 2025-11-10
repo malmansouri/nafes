@@ -195,7 +195,7 @@ def ar(text):
 
 # ----- تحميل الملف -----
 default_path = "/mnt/data/نسخة من تقرير_نافس_20_08_2025.xlsx"
-use_default = st.toggle("استخدام ملف المثال المرفق", value=True, help="يمكنك إلغاء التفعيل لتحميل ملف آخر.")
+use_default = st.toggle("تحميل ملف نافس بصيغة الاكسل", value=True, help="يمكنك إلغاء التفعيل لتحميل ملف آخر.")
 uploaded = default_path if use_default else st.file_uploader("ارفع ملف Excel (xlsx)", type=["xlsx"])
 
 loaded = load_excel(uploaded)
@@ -204,7 +204,7 @@ if not loaded:
 
 df, sheet_names, dedup_report = loaded
 
-# تقرير الأعمدة المدموجة
+# تمقرير الأعمدة المدموجة
 if dedup_report:
     with st.expander("تم اكتشاف أعمدة مكررة وتم دمجها تلقائيًا (اضغط للاطلاع)"):
         for name, cols in dedup_report.items():
